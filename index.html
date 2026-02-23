@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JIMHOPE LOGISTICS LTD</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#f5f6fa;color:#222}
+header{
+background:#000;color:#fff;padding:15px 8%;
+display:flex;justify-content:space-between;align-items:center}
+header h2{color:#ff4d00}
+nav a{color:#fff;margin-left:20px;text-decoration:none}
+nav a:hover{color:#ff4d00}
+.hero{
+background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1502877338535-766e1452684a');
+height:85vh;background-size:cover;background-position:center;
+display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
+.hero h1{font-size:3rem}
+.hero p{margin-top:10px;font-size:1.2rem}
+.btn{background:#ff4d00;color:#fff;padding:12px 30px;
+text-decoration:none;border-radius:6px;margin-top:20px;display:inline-block}
+.section{padding:60px 8%}
+.section h2{text-align:center;margin-bottom:30px}
+.services{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.service{
+background:#fff;padding:15px;border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);text-align:center}
+.fleet{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.car{
+background:#fff;border-radius:8px;overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.1)}
+.car img{width:100%;height:180px;object-fit:cover}
+.car .info{padding:15px}
+.price{color:#ff4d00;font-weight:bold;margin-top:5px}
+form{
+background:#fff;padding:25px;border-radius:8px;
+max-width:500px;margin:auto;
+box-shadow:0 3px 10px rgba(0,0,0,0.1)}
+input,select{width:100%;padding:12px;margin-bottom:12px;
+border-radius:5px;border:1px solid #ccc}
+button{
+background:#ff4d00;color:#fff;padding:12px;border:none;
+width:100%;border-radius:5px;font-weight:bold;cursor:pointer}
+#summary{margin-top:15px;text-align:center;font-weight:bold}
+footer{background:#000;color:#fff;text-align:center;padding:20px;margin-top:30px}
+.whatsapp{
+position:fixed;bottom:20px;right:20px;background:#25D366;
+color:#fff;padding:14px;border-radius:50%;font-size:20px;text-decoration:none}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>JIMHOPE LOGISTICS LTD</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#fleet">Fleet</a>
+<a href="#booking">Book</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>Where comfort meets the road</h1>
+<p>Get the Best Car For Hire</p>
+<a href="#booking" class="btn">Book Now</a>
+</div>
+</section>
+
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="service">Self Drive and Rental</div>
+<div class="service">Chauffeur Service</div>
+<div class="service">Corporate & Business Travel</div>
+<div class="service">Wedding & Event Transport</div>
+<div class="service">Airport Transfers</div>
+<div class="service">Weekend Getaways</div>
+</div>
+</section>
+
+<section class="section" id="fleet">
+<h2>Luxury Fleet</h2>
+<div class="fleet">
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6">
+<div class="info">
+<h3>Toyota Land Cruiser TX</h3>
+<p>Luxury SUV • 7 Seater</p>
+<div class="price">Ksh 10,000 / day</div>
+</div>
+</div>
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738">
+<div class="info">
+<h3>Toyota Land Cruiser TXL</h3>
+<p>Executive Comfort • Leather Interior</p>
+<div class="price">Ksh 13,000 / day</div>
+</div>
+</div>
+
+<div class="car">
+<img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b">
+<div class="info">
+<h3>Mercedes Sprinter VIP</h3>
+<p>Perfect for Events & Group Travel</p>
+<div class="price">Ksh 18,000 / day</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="booking">
+<h2>Book Your Ride</h2>
+
+<form id="bookingForm">
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<select id="car" required>
+<option value="">Select Vehicle</option>
+<option value="10000">Toyota TX</option>
+<option value="13000">Toyota TXL</option>
+<option value="18000">Mercedes Sprinter</option>
+</select>
+
+<select id="service" required>
+<option value="">Service Type</option>
+<option>Self Drive</option>
+<option>Chauffeur Service</option>
+<option>Corporate Travel</option>
+<option>Wedding/Event</option>
+<option>Airport Transfer</option>
+<option>Weekend Getaway</option>
+</select>
+
+<input type="date" id="pickup" required>
+<input type="date" id="return" required>
+
+<button type="submit">Check Availability & Book</button>
+</form>
+
+<div id="summary"></div>
+
+</section>
+
+<footer>
+© 2026 JIMHOPE LOGISTICS LTD | All Rights Reserved
+</footer>
+
+<a href="https://wa.me/254724000000" class="whatsapp">💬</a>
+
+<script>
+const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let car = document.getElementById("car");
+let carName = car.options[car.selectedIndex].text;
+let price = car.value;
+let service = document.getElementById("service").value;
+let pickup = document.getElementById("pickup").value;
+let ret = document.getElementById("return").value;
+
+let days = (new Date(ret) - new Date(pickup))/(1000*3600*24);
+
+if(days <= 0){
+alert("Select valid dates");
+return;
+}
+
+// availability check
+let unavailable = bookings.find(b =>
+b.car === carName &&
+!(ret <= b.pickup || pickup >= b.return)
+);
+
+if(unavailable){
+document.getElementById("summary").innerHTML =
+"❌ Vehicle unavailable for selected dates.";
+return;
+}
+
+let total = days * price;
+
+bookings.push({name,phone,car:carName,service,pickup,return:ret,total,status:"Confirmed"});
+localStorage.setItem("bookings", JSON.stringify(bookings));
+
+document.getElementById("summary").innerHTML =
+"✅ Booking Confirmed<br>Total: Ksh "+total.toLocaleString()+
+"<br>An invoice & confirmation will be sent via WhatsApp.";
+
+});
+</script>
+
+</body>
+</html>
